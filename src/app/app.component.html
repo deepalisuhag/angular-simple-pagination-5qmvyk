@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html ng-app="my-app">
+
+<head>
+
+
+<body ng-controller="ListController as list">
+	<hello name="{{ name }}"></hello>
+	<p>
+		Start editing to see some magic happen :)
+	</p>
+	<table border="1">
+		<tr>
+			<td>ID</td>
+			<td>NAME</td>
+			<td>BILLER CODE</td>
+			<td>LOGIN ID</td>
+			<td>EMAIL</td>
+			<td>STATUS</td>
+		</tr>
+		<tr *ngFor="let d of data | paginate: { itemsPerPage: 5, currentPage: p }">
+
+			<td>{{ d.userId }}</td>
+			<td> {{ d.id }}</td>
+			<td> {{ d.title }}</td>
+			<td> {{ d.completed }}</td>
+			<td>{{ d.title }}</td>
+			<td>{{ d.completed }}</td>
+
+
+		</tr>
+
+	</table>
+</body>
+
+</html>
